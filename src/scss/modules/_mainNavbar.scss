@@ -1,0 +1,75 @@
+.mainNavbar {
+   background: rgb(255 255 255 / 8%);
+
+   &__container {
+      @include flex-col(space-between);
+      padding: 16px 20px;
+   }
+   
+   &__logoBlock {}
+   
+   &__logoLink {
+      text-decoration: none;
+   }
+   
+   &__logoImg {}
+   
+   &__optionsBlock {
+      @include flex-col();
+      gap: 25px;
+   }
+   
+   &__langBlock {
+      @include flex-col();
+      flex-direction: column;
+      gap: 5px;
+      position: relative;
+   }
+   
+   &__dropBtn {
+      overflow: hidden; 
+      border-radius: 25px;
+      border: 1px solid $white-clr;
+   }
+
+   &__dropBtn,
+   &__dropdownItem {
+      @include flex-col();
+      text-decoration: none;
+      transition: $transition;
+
+      &:hover{
+         background: $light-black-clr
+      }
+   }
+
+   
+   &__langIcon {
+      border-radius: 50%;
+      border: 1px solid $white-clr;
+   }
+   
+   &__langText {
+      @include set-font(16px, 500, $white-clr);
+      font-style: italic;
+      margin: 0 10px;
+   }
+   
+   &__dropdown {
+      @include flex-col();
+      flex-direction: column;
+      gap: 5px;
+      position: absolute;
+      left: 0;
+      top: 50px;
+      overflow: hidden;
+      border: 1px solid $white-clr;
+      border-radius: 25px;
+      display: none;
+
+      &--active {
+         display: block;
+      }
+   }
+   
+}

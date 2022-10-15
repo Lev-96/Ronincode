@@ -1,0 +1,104 @@
+.asideNav {
+
+   &__menu {
+      @include flex-col(flex-start);
+      flex-direction: column;
+      gap: 20px;
+   }
+
+   &__menuItem {
+      @include flex-col();
+      cursor: pointer;
+
+      &:not(.asideNav__menuItem--active):hover {
+         .asideNav__ItemLine {
+            width: 50px;
+         }
+
+         .asideNav__cover {
+            margin-left: -20px;
+         }
+
+         .asideNav__linkText {
+            color: $blue-clr;
+         }
+      }
+   }
+
+   &__menuItem--active {
+      .asideNav__ItemLine {
+         border-top: 2px solid $blue-clr;
+         width: 32px;
+      }
+
+      .asideNav__cover {
+         margin-left: 0px;
+      }
+      .asideNav__linkText {
+         color: $blue-clr;
+      }
+   }
+
+   &__link {
+      @include flex-col();
+   }
+
+   &__linkBody {
+      @include flex-col(flex-start);
+      gap: 15px;
+      padding: 12px 16px;
+      border: $border-blue;
+      background: $black-clr;
+      border-radius: $radius 0 0 $radius;
+      z-index: 2;
+      width: 150px
+   }
+
+   &__linkIcon {
+      @include svg(20px, $white-clr)
+   }
+
+   &__linkText {
+      @include set-font(14px, 400, $white-clr);
+      text-transform: uppercase;
+      transition: $transition;
+   }
+
+   &__cover {
+      @include flex-col();
+      transition: $transition;
+      margin-left: -30px;
+   }
+
+   &__coverInner {
+      width: 30px;
+      height: 32px;
+      background: rgba(165, 161, 161, 1);
+      @include flex-col(space-around);
+      flex-direction: column;
+      z-index: 1;
+   }
+
+   &__coverInnerItem {
+      width: 5px;
+      height: 5px;
+      background-color: $black-clr;
+   }
+
+   &__coverOuter {
+      border: $border-blue;
+      background: $black-clr;
+      width: 30px;
+      height: 46px;
+      border-radius: 0 $radius $radius 0;
+   }
+
+   &__ItemLine {
+      border: none;
+      width: 60px;
+      border-top: $border-blue;
+      transition: $transition;
+   }
+
+   
+}

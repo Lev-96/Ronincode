@@ -1,13 +1,18 @@
 // Colors
-$black-clr: #000000;
-$bg-clr: #fff;
-$blue-clr: #3cc0f0;
-$grey-clr: #b1abab;
+$black-clr: #202124;
+$light-black-clr: #00000047;
+$bg-clr: rgb(26, 0, 70);
+$blue-clr: #50D0EC;
+$white-clr: #fff;
+
+///////
+$border-blue: 1px solid #50D0EC;
+$radius: 3px;
 
 // font
-$font: 'Roboto',Arial,sans-serif;
+$font: 'Roboto',sans-serif;
 
-$transition: all 0.5s;
+$transition: all 0.2s linear;
 
 // media
 $tab-screen: 960px;

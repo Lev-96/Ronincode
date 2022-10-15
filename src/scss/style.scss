@@ -2,6 +2,9 @@
 @import "./utils/global-styles";
 @import "./utils/mixins";
 
+// modules
 
-
+@import "./modules/mainNavbar";
+@import "./modules/asideNav";
+@import "./modules/slider";
 

@@ -11,29 +11,49 @@
    font-family: $font;
 }
 
+body {
+   min-height: 100vh;
+   overflow: hidden;
+}
 .container{
-   max-width: 1200px;
+   max-width: 1800px;
    padding: 0 20px;
    margin: 0 auto;
+
+   @media(max-width: 1800px) {
+      max-width: 1600px;
+   }
+   @media(max-width: 1600px) {
+      max-width: 1200px;
+   }
 }
 
-.title {
-   @include set-font(42px, 600);
-   text-align: center;
-   margin-bottom: 40px;
+.contentBg{
+   position: absolute;
+   left: 0;
+   top: 0;
+   z-index: -1;
+   width: 100%;
+   height: 100%;
+}
+
+.btn {
+   cursor: pointer;
+   border: 1px solid $white-clr;
+   border-radius: $radius;
+   background: transparent;
+   padding: 13px 30px;
    text-transform: uppercase;
+   color: #fff;
+   transition: $transition;
+   font-weight: 500;
 
-   @include for-tablet {
-      font-size: 30px;
-   }
-
-   @include for-phone {
-      font-size: 20px;
+   &:hover {
+      background: $light-black-clr;
    }
 }
 
-
-.logo-icon {
-   width: 100px;
-   height: 59px;
+.main{
+   @include flex-col();
+   padding: 40px 20px;
 }
