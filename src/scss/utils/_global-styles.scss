@@ -1,0 +1,39 @@
+@import "./variables";
+@import "./mixins";
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+*:not(i){
+   font-family: $font;
+}
+
+.container{
+   max-width: 1200px;
+   padding: 0 20px;
+   margin: 0 auto;
+}
+
+.title {
+   @include set-font(42px, 600);
+   text-align: center;
+   margin-bottom: 40px;
+   text-transform: uppercase;
+
+   @include for-tablet {
+      font-size: 30px;
+   }
+
+   @include for-phone {
+      font-size: 20px;
+   }
+}
+
+
+.logo-icon {
+   width: 100px;
+   height: 59px;
+}

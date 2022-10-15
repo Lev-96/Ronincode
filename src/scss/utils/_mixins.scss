@@ -1,0 +1,38 @@
+@mixin set-font ($size, $weight: 400, $clr: $black-clr) {
+   font: $weight $size $font;
+   color: $clr;
+}
+
+@mixin svg($size, $color: $black-clr) {
+   width: $size;
+   height: $size;
+   fill: $color;
+   transition: $transition
+}
+
+
+
+@mixin flex-col($layout: center,$align: center) {
+   display: flex;
+   justify-content: $layout;
+   align-items: $align;
+}
+
+
+@mixin for-phone {
+   @media (max-width: $mob-screen) {
+      @content;
+   }
+}
+
+@mixin for-tablet {
+   @media (max-width: $tab-screen) {
+      @content;
+   }
+}
+
+@mixin for-min-tablet {
+   @media (max-width: $min-tab-screen) {
+      @content;
+   }
+}

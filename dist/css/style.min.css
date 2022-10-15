@@ -1,0 +1,38 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*:not(i) {
+  font-family: "Roboto", Arial, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.title {
+  font: 600 42px "Roboto", Arial, sans-serif;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+@media (max-width: 960px) {
+  .title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 480px) {
+  .title {
+    font-size: 20px;
+  }
+}
+
+.logo-icon {
+  width: 100px;
+  height: 59px;
+}

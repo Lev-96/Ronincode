@@ -1,0 +1,10 @@
+<form action="./php/sendMail.php"  method="POST" class="form" id="send-mail-form" >
+   <label for="name" class="label" data-lang="name">Անուն*</label>
+   <input type="text" id="name" name="name" class="field name-field" required>
+   <label for="email" class="label" data-lang="email">Էլ. փոստի հասցե*</label>
+   <input type="email" id="email" name="email" class="field email-field" required>
+   <label for="message" id="message"  class="label" data-lang="message">Հաղորդագրություն</label>
+   <textarea class="message-field" name="message" required></textarea>
+   <button class="submit-btn" data-lang="submit-btn"  type="submit">Ուղարկել</button>
+</form>
+@@include('popup.html'{})
