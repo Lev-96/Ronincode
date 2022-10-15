@@ -1,9 +1,10 @@
 .asideNav {
+   position: relative;
 
    &__menu {
       @include flex-col(flex-start);
       flex-direction: column;
-      gap: 20px;
+      gap: 10px;
    }
 
    &__menuItem {
@@ -100,5 +101,24 @@
       transition: $transition;
    }
 
-   
+   &__socials {
+      align-self: flex-end;
+      @include flex-col();
+      gap: 5px;
+      margin-top: 20px;
+      position: absolute;
+      width: 100%;
+   }
+
+   &__socialLink {}
+
+   &__socialIcon {
+      @include svg(30px,$white-clr);
+      transition: $transition;
+
+      &:hover {
+         @include svg(30px,$blue-clr);
+         transform: scale(1.1);
+      }
+   }
 }

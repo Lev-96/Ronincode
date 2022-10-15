@@ -129,12 +129,15 @@ body {
   display: block;
 }
 
+.asideNav {
+  position: relative;
+}
 .asideNav__menu {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   flex-direction: column;
-  gap: 20px;
+  gap: 10px;
 }
 .asideNav__menuItem {
   display: flex;
@@ -182,6 +185,7 @@ body {
   width: 20px;
   height: 20px;
   fill: #fff;
+  stroke: #fff;
   transition: all 0.2s linear;
 }
 .asideNav__linkText {
@@ -225,9 +229,158 @@ body {
   border-top: 1px solid #50D0EC;
   transition: all 0.2s linear;
 }
+.asideNav__socials {
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  margin-top: 20px;
+  position: absolute;
+  width: 100%;
+}
+.asideNav__socialIcon {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  stroke: #fff;
+  transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+.asideNav__socialIcon:hover {
+  width: 30px;
+  height: 30px;
+  fill: #50D0EC;
+  stroke: #50D0EC;
+  transition: all 0.2s linear;
+  transform: scale(1.1);
+}
 
 .slider {
   border: 1px solid #50D0EC;
   width: 100%;
   height: 77vh;
+}
+
+.home {
+  width: 100%;
+  padding: 20px;
+}
+.home__laptop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  height: 196px;
+}
+.home__laptopHeader {
+  background: #BDB5B5;
+  border-radius: 3px 3px 0 0;
+  height: 180px;
+  box-shadow: 0px 0px 8px 1px #303030;
+  overflow: hidden;
+  width: 350px;
+  padding: 5px;
+  height: 0;
+  animation: open-laptop 3s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.home__laptopScreen {
+  background-color: #202124;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  overflow: hidden;
+  opacity: 0;
+  animation: screen-show 1s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 1s;
+}
+.home__laptopLogo {
+  width: 100%;
+  opacity: 0;
+  animation: screen-show 0.5s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 4.5s;
+}
+.home__laptopText {
+  opacity: 0;
+  font: 500 16px "Roboto", sans-serif;
+  color: #50D0EC;
+  position: relative;
+  animation: screen-show 0.5s linear 1;
+  animation-fill-mode: forwards;
+  animation-delay: 4.5s;
+}
+.home__laptopText::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: #202124;
+  border-left: 2px solid #50D0EC;
+  animation: typing 5s steps(16) infinite, border-blink 0.5s linear infinite;
+  animation-delay: 4.8s, 4.8s;
+}
+.home__laptopFooter {
+  margin-top: 3px;
+  background: #BDB5B5;
+  border-radius: 0 0 3px 3px;
+  width: 350px;
+  height: 10px;
+  box-shadow: 0px 0px 8px 1px #303030;
+}
+
+@keyframes typing {
+  40%, 60% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes border-blink {
+  0% {
+    border-left: 2px solid #50D0EC;
+  }
+  100% {
+    border-left: 2px solid #202124;
+  }
+}
+@keyframes open-laptop {
+  0% {
+    overflow: hidden;
+    width: 350px;
+    padding: 5px;
+    height: 0;
+  }
+  100% {
+    overflow: visible;
+    width: 300px;
+    padding: 8px;
+    height: 180px;
+  }
+}
+@keyframes screen-show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes show-content {
+  0% {
+    display: none;
+  }
+  100% {
+    display: block;
+  }
 }
