@@ -6,13 +6,9 @@
       padding: 16px 20px;
    }
    
-   &__logoBlock {}
-   
    &__logoLink {
       text-decoration: none;
    }
-   
-   &__logoImg {}
    
    &__optionsBlock {
       @include flex-col();
@@ -39,7 +35,14 @@
       transition: $transition;
 
       &:hover{
-         background: $light-black-clr
+         background: $light-black-clr;
+         border: $border-blue;
+         .mainNavbar__langText {
+            color: $blue-clr;
+         }
+         .mainNavbar__langIcon {
+            border: $border-blue;
+         }
       }
    }
 
@@ -47,12 +50,14 @@
    &__langIcon {
       border-radius: 50%;
       border: 1px solid $white-clr;
+      transition: $transition;
    }
    
    &__langText {
       @include set-font(16px, 500, $white-clr);
       font-style: italic;
       margin: 0 10px;
+      transition: $transition;
    }
    
    &__dropdown {
@@ -70,6 +75,51 @@
       &--active {
          display: block;
       }
+
    }
-   
+   &__burgerBtn {
+      padding: 15px 10px;
+      position: relative;
+      @include flex-col();
+      &:hover span::before,
+      &:hover span::after {
+         background-color: $blue-clr;
+         width: 23px;
+      }
+      &:hover span {
+         background-color: $blue-clr;
+      }
+   }
+   &__animationSpan {
+      display: block;
+      width: 23px;
+      height: 3px;
+      background-color: $white-clr;
+      border-radius: 10px;
+      transition: $transition;
+
+      &::before,
+      &::after {
+         position: absolute;
+         content: "";
+         width: 30%;
+         height: 3px;
+         background-color: $white-clr;
+         transition: $transition;
+         border-radius: 10px;
+
+      }
+      &::after {
+         top: 5px;
+         left: 10px;
+      }
+      &::before {
+         bottom: 5px;
+         right: 10px;
+      }
+   }
+   &__burgerIcon {
+      @include svg(25px,$white-clr);
+      transition: $transition;
+   }
 }

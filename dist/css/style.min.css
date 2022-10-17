@@ -51,6 +51,11 @@ body {
 }
 .btn:hover {
   background: rgba(0, 0, 0, 0.2784313725);
+  border: 1px solid #50D0EC;
+  color: #50D0EC;
+}
+.btn:hover svg {
+  fill: #50D0EC;
 }
 
 .main {
@@ -100,16 +105,25 @@ body {
 }
 .mainNavbar__dropBtn:hover, .mainNavbar__dropdownItem:hover {
   background: rgba(0, 0, 0, 0.2784313725);
+  border: 1px solid #50D0EC;
+}
+.mainNavbar__dropBtn:hover .mainNavbar__langText, .mainNavbar__dropdownItem:hover .mainNavbar__langText {
+  color: #50D0EC;
+}
+.mainNavbar__dropBtn:hover .mainNavbar__langIcon, .mainNavbar__dropdownItem:hover .mainNavbar__langIcon {
+  border: 1px solid #50D0EC;
 }
 .mainNavbar__langIcon {
   border-radius: 50%;
   border: 1px solid #fff;
+  transition: all 0.2s linear;
 }
 .mainNavbar__langText {
   font: 500 16px "Roboto", sans-serif;
   color: #fff;
   font-style: italic;
   margin: 0 10px;
+  transition: all 0.2s linear;
 }
 .mainNavbar__dropdown {
   display: flex;
@@ -127,6 +141,53 @@ body {
 }
 .mainNavbar__dropdown--active {
   display: block;
+}
+.mainNavbar__burgerBtn {
+  padding: 15px 10px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mainNavbar__burgerBtn:hover span::before, .mainNavbar__burgerBtn:hover span::after {
+  background-color: #50D0EC;
+  width: 23px;
+}
+.mainNavbar__burgerBtn:hover span {
+  background-color: #50D0EC;
+}
+.mainNavbar__animationSpan {
+  display: block;
+  width: 23px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 10px;
+  transition: all 0.2s linear;
+}
+.mainNavbar__animationSpan::before, .mainNavbar__animationSpan::after {
+  position: absolute;
+  content: "";
+  width: 30%;
+  height: 3px;
+  background-color: #fff;
+  transition: all 0.2s linear;
+  border-radius: 10px;
+}
+.mainNavbar__animationSpan::after {
+  top: 5px;
+  left: 10px;
+}
+.mainNavbar__animationSpan::before {
+  bottom: 5px;
+  right: 10px;
+}
+.mainNavbar__burgerIcon {
+  width: 25px;
+  height: 25px;
+  fill: #fff;
+  stroke: #fff;
+  transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .asideNav {
@@ -234,7 +295,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5px;
+  gap: 20px;
   margin-top: 20px;
   position: absolute;
   width: 100%;
@@ -256,10 +317,25 @@ body {
   transform: scale(1.1);
 }
 
+.mobile__asideNav {
+  position: fixed;
+  height: 100%;
+  background-color: #202124;
+  padding: 20px 0 20px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 1px solid #50D0EC;
+}
+
 .slider {
   border: 1px solid #50D0EC;
   width: 100%;
   height: 77vh;
+}
+.slider__slide {
+  width: 100%;
+  height: 100%;
 }
 
 .home {
@@ -336,6 +412,52 @@ body {
   width: 350px;
   height: 10px;
   box-shadow: 0px 0px 8px 1px #303030;
+}
+.home__content-text {
+  font: 400 16px "Roboto", sans-serif;
+  color: #fff;
+  padding: 8px;
+  background: rgba(0, 0, 0, 0.2784313725);
+  margin: 20px auto;
+  max-width: 650px;
+  width: 100%;
+  text-align: center;
+}
+.home__scroller {
+  border: 1px solid #fff;
+  border-radius: 20px;
+  height: 40px;
+  width: 20px;
+  padding: 5px;
+  margin: 45px auto 0;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s linear;
+}
+.home__scroller:hover {
+  border-color: #50D0EC;
+}
+.home__scroller:hover .home__scrollerInner {
+  top: calc(100% - 16px);
+  background: #50D0EC;
+}
+.home__scrollerInner {
+  transition: all 0.2s linear;
+  width: 8px;
+  height: 8px;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+.home__scrollerText {
+  font: 400 14px "Roboto", sans-serif;
+  color: #fff;
+  text-align: center;
+  margin-top: 15px;
+  letter-spacing: 2px;
+  transition: all 0.2s linear;
 }
 
 @keyframes typing {

@@ -11,9 +11,10 @@
          rel="stylesheet">
          <link rel="stylesheet" href="css/style.min.css">
          <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
       <title>RoninCode</title>
    </head>
-<body >
+<body>
    <div class="contentBg"></div>
    <nav class="mainNavbar">
    <div class="mainNavbar__container container">
@@ -40,12 +41,15 @@
                </a>
             </div>
          </div>
+         <button class="btn mainNavbar__burgerBtn">
+            <span class="mainNavbar__animationSpan"></span>
+         </button>
       </div>
    </div>
 </nav>
-
-   <main class="main container">
-      <aside class="asideNav">
+   <div class="animate__animated animate__zoomInDown">
+      <div class="mobile__asideNav">
+         <aside class="asideNav">
    <nav class="asideNav__menu">
       <div class="asideNav__menuItem asideNav__menuItem--active ">
          <div class="asideNav__link">
@@ -174,7 +178,140 @@
       </a>
    </div>
 </aside>
-      <section class="slider">
+      </div>
+      <main class="main  container">
+         <div class="main__asideNav" style="display: none;">
+            <aside class="asideNav">
+   <nav class="asideNav__menu">
+      <div class="asideNav__menuItem asideNav__menuItem--active ">
+         <div class="asideNav__link">
+            <div class="asideNav__linkBody">
+               <svg class="asideNav__linkIcon">
+                  <use xlink:href="img/icons/sprite.svg#sideNavHome"></use>
+               </svg>
+               <span class="asideNav__linkText">Home</span>
+            </div>
+            <div class="asideNav__cover">
+               <div class="asideNav__coverInner">
+                  <div class="asideNav__coverInnerItem"></div>
+                  <div class="asideNav__coverInnerItem"></div>
+               </div>
+               <div class="asideNav__coverOuter"></div>
+            </div>
+         </div>
+         <hr class="asideNav__ItemLine">
+      </div>
+      <div class="asideNav__menuItem ">
+         <div class="asideNav__link">
+            <div class="asideNav__linkBody">
+               <svg class="asideNav__linkIcon">
+                  <use xlink:href="img/icons/sprite.svg#sideNavServices"></use>
+               </svg>
+               <span class="asideNav__linkText">SERVICES</span>
+            </div>
+            <div class="asideNav__cover">
+               <div class="asideNav__coverInner">
+                  <div class="asideNav__coverInnerItem"></div>
+                  <div class="asideNav__coverInnerItem"></div>
+               </div>
+               <div class="asideNav__coverOuter"></div>
+            </div>
+         </div>
+         <hr class="asideNav__ItemLine">
+      </div>
+      <div class="asideNav__menuItem ">
+         <div class="asideNav__link">
+            <div class="asideNav__linkBody">
+               <svg class="asideNav__linkIcon">
+                  <use xlink:href="img/icons/sprite.svg#sideNavTeam"></use>
+               </svg>
+               <span class="asideNav__linkText">OUR TEAM</span>
+            </div>
+            <div class="asideNav__cover">
+               <div class="asideNav__coverInner">
+                  <div class="asideNav__coverInnerItem"></div>
+                  <div class="asideNav__coverInnerItem"></div>
+               </div>
+               <div class="asideNav__coverOuter"></div>
+            </div>
+         </div>
+         <hr class="asideNav__ItemLine">
+      </div>
+      <div class="asideNav__menuItem ">
+         <div class="asideNav__link">
+            <div class="asideNav__linkBody">
+               <svg class="asideNav__linkIcon">
+                  <use xlink:href="img/icons/sprite.svg#sideNavProjects"></use>
+               </svg>
+               <span class="asideNav__linkText">PROJECTS</span>
+            </div>
+            <div class="asideNav__cover">
+               <div class="asideNav__coverInner">
+                  <div class="asideNav__coverInnerItem"></div>
+                  <div class="asideNav__coverInnerItem"></div>
+               </div>
+               <div class="asideNav__coverOuter"></div>
+            </div>
+         </div>
+         <hr class="asideNav__ItemLine">
+      </div>
+      <div class="asideNav__menuItem ">
+         <div class="asideNav__link">
+            <div class="asideNav__linkBody">
+               <svg class="asideNav__linkIcon">
+                  <use xlink:href="img/icons/sprite.svg#sideNavPricing"></use>
+               </svg>
+               <span class="asideNav__linkText">PRICING</span>
+            </div>
+            <div class="asideNav__cover">
+               <div class="asideNav__coverInner">
+                  <div class="asideNav__coverInnerItem"></div>
+                  <div class="asideNav__coverInnerItem"></div>
+               </div>
+               <div class="asideNav__coverOuter"></div>
+            </div>
+         </div>
+         <hr class="asideNav__ItemLine">
+      </div>
+      <div class="asideNav__menuItem ">
+         <div class="asideNav__link">
+            <div class="asideNav__linkBody">
+               <svg class="asideNav__linkIcon">
+                  <use xlink:href="img/icons/sprite.svg#sideNavPricing"></use>
+               </svg>
+               <span class="asideNav__linkText">CONTACTS</span>
+            </div>
+            <div class="asideNav__cover">
+               <div class="asideNav__coverInner">
+                  <div class="asideNav__coverInnerItem"></div>
+                  <div class="asideNav__coverInnerItem"></div>
+               </div>
+               <div class="asideNav__coverOuter"></div>
+            </div>
+         </div>
+         <hr class="asideNav__ItemLine">
+      </div>
+   </nav>
+   <div class="asideNav__socials">
+      <a href="" class="asideNav__socialLink">
+         <svg class="asideNav__socialIcon">
+            <use xlink:href="img/icons/sprite.svg#fb"></use>
+         </svg>
+      </a>
+      <a href="" class="asideNav__socialLink">
+         <svg class="asideNav__socialIcon">
+            <use xlink:href="img/icons/sprite.svg#linkedIn"></use>
+         </svg>
+      </a>
+      <a href="" class="asideNav__socialLink">
+         <svg class="asideNav__socialIcon">
+            <use xlink:href="img/icons/sprite.svg#telegram"></use>
+         </svg>
+      </a>
+   </div>
+</aside>
+         </div>
+         <section class="slider">
    <article class="slider__slde">
       <div class="home">
    <div class="home__laptop">
@@ -186,10 +323,22 @@
       </div>
       <div class="home__laptopFooter"></div>
    </div>
+   <p class="home__content-text">We design and build successful web software and mobile applications that are modern,
+      search engine optimized, using
+      latest technology, user friendly, easy navigating, easy maintainable, scalable and what is most important
+      reliable.</p>
+   <div class="home__scrollerBlock">
+      <div class="home__scroller">
+         <div class="home__scrollerInner"></div>
+      </div>
+      <h4 class="home__scrollerText">SCROLL DOWN</h4>
+   </div>
+
 </div>
    </article>
 </section>
-   </main>
+      </main> 
+   </div> 
    <script src="js/app.js"></script>
 </body>
 

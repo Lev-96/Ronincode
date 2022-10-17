@@ -75,6 +75,57 @@
       height: 10px;
       box-shadow: 0px 0px 8px 1px #303030;
    }
+
+   &__content-text {
+      @include set-font(16px,400,$white-clr);
+      padding: 8px;
+      background: $light-black-clr;
+      margin: 20px auto;
+      max-width: 650px;
+      width: 100%;
+      text-align: center;
+   }
+
+   &__scroller {
+      border: 1px solid $white-clr;
+      border-radius: 20px;
+      height: 40px;
+      width: 20px;
+      padding: 5px;
+      margin: 45px auto 0;
+      position: relative;
+      cursor: pointer;
+      transition: $transition;
+
+      &:hover {
+         border-color: $blue-clr;
+
+         .home__scrollerInner {
+            top: calc(100% - 16px);
+            background: $blue-clr;
+         }
+         
+      }
+      
+   } 
+   &__scrollerInner {
+      transition: $transition;
+      width: 8px;
+      height: 8px;
+      background: $white-clr;
+      border-radius: 50%;
+      position: absolute;
+      left: 5px;
+      top: 5px;
+   }
+
+   &__scrollerText {
+      @include set-font(14px,400, $white-clr);
+      text-align: center;
+      margin-top: 15px;
+      letter-spacing: 2px;
+      transition: $transition;
+   }
 }
 
 

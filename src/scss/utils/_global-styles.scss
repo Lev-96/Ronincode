@@ -50,6 +50,11 @@ body {
 
    &:hover {
       background: $light-black-clr;
+      border: 1px solid $blue-clr;
+      color: $blue-clr;
+   }
+   &:hover svg{
+      fill: $blue-clr;
    }
 }
 
@@ -57,3 +62,4 @@ body {
    @include flex-col();
    padding: 40px 20px;
 }
+
