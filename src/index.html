@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-   @@include('html/components/head.html'{})
-<body >
+@@include('html/components/head.html'{})
+
+<body>
    <div class="contentBg"></div>
    @@include('html/components/mainNavbar.html'{})
-
-   <main class="main container">
-      @@include('html/components/asideNav.html'{})
+   <!-- <div class="animate__animated animate__zoomInDown"> -->
+   @@include('html/components/mobileAsideNav.html'{})
+   
+   <main class="main  container">
+      <div class="main__asideNav" >
+         @@include('html/components/asideNav.html'{})
+      </div>
       @@include('html/components/slider.html'{})
    </main>
+   <!-- </div>  -->
    <script src="js/app.js"></script>
 </body>
 

@@ -20,7 +20,7 @@
 }
 
 
-@mixin for-phone {
+@mixin for-mobile {
    @media (max-width: $mob-screen) {
       @content;
    }
