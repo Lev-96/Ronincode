@@ -72,16 +72,39 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
   padding: 16px 20px;
 }
 .mainNavbar__logoLink {
   text-decoration: none;
+}
+.mainNavbar__logoImg {
+  width: 100%;
+}
+@media (max-width: 480px) {
+  .mainNavbar__logoImg {
+    display: none;
+  }
+}
+.mainNavbar__mobLogoImg {
+  display: none;
+  width: 40px;
+}
+@media (max-width: 480px) {
+  .mainNavbar__mobLogoImg {
+    display: block;
+  }
 }
 .mainNavbar__optionsBlock {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 25px;
+}
+@media (max-width: 960px) {
+  .mainNavbar__applyBtn {
+    display: none;
+  }
 }
 .mainNavbar__langBlock {
   display: flex;
@@ -118,6 +141,11 @@ body {
   border: 1px solid #fff;
   transition: all 0.2s linear;
 }
+@media (max-width: 960px) {
+  .mainNavbar__langIcon {
+    width: 38px;
+  }
+}
 .mainNavbar__langText {
   font: 500 16px "Roboto", sans-serif;
   color: #fff;
@@ -148,6 +176,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  display: none;
+}
+@media (max-width: 960px) {
+  .mainNavbar__burgerBtn {
+    display: block;
+  }
 }
 .mainNavbar__burgerBtn:hover span::before, .mainNavbar__burgerBtn:hover span::after {
   background-color: #50D0EC;
@@ -317,7 +351,7 @@ body {
   transform: scale(1.1);
 }
 
-.mobile__asideNav {
+.mobileAsideNav {
   position: fixed;
   height: 100%;
   background-color: #202124;
@@ -325,7 +359,43 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   border-right: 1px solid #50D0EC;
+  z-index: 9;
+  top: 0;
+  transition: all 0.2s linear;
+  left: -100%;
+}
+.mobileAsideNav--active {
+  left: 0;
+}
+.mobileAsideNav__closeBtn {
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  padding: 0 3px 1px;
+}
+.mobileAsideNav__closeIcon {
+  width: 30px;
+  height: 30px;
+  fill: #fff;
+  stroke: #fff;
+  transition: all 0.2s linear;
+}
+.mobileAsideNav__optionsBlock {
+  position: absolute;
+  top: 16px;
+  left: 20px;
+}
+.mobileAsideNav__applyBtn {
+  display: block;
+  padding: 9px 30px;
+}
+
+@media (max-width: 960px) {
+  .main__asideNav {
+    display: none;
+  }
 }
 
 .slider {

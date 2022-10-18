@@ -3,16 +3,40 @@
 
    &__container {
       @include flex-col(space-between);
+      gap: 10px;
       padding: 16px 20px;
    }
    
    &__logoLink {
       text-decoration: none;
    }
+
+   &__logoImg {
+      width: 100%;
+
+      @include for-mobile {
+         display: none;
+      }
+   }
    
+   &__mobLogoImg {
+      display: none;
+      width: 40px;
+
+      @include for-mobile {
+         display: block;
+      }
+   }
+
    &__optionsBlock {
       @include flex-col();
       gap: 25px;
+   }
+
+   &__applyBtn {
+      @include for-tablet {
+         display: none;
+      }
    }
    
    &__langBlock {
@@ -51,6 +75,10 @@
       border-radius: 50%;
       border: 1px solid $white-clr;
       transition: $transition;
+
+      @include for-tablet {
+         width: 38px;
+      }
    }
    
    &__langText {
@@ -81,6 +109,13 @@
       padding: 15px 10px;
       position: relative;
       @include flex-col();
+      display: none;
+
+      @include for-tablet {
+         display: block;
+      }
+
+
       &:hover span::before,
       &:hover span::after {
          background-color: $blue-clr;

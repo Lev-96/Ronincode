@@ -1,8 +1,39 @@
-.mobile__asideNav {
+.mobileAsideNav {
    position: fixed;
    height: 100%;
    background-color: $black-clr;
    padding: 20px 0 20px 20px;
    @include flex-col();
+   flex-direction: column;
    border-right: $border-blue;
+   z-index: 9;
+   top: 0;
+   transition: $transition;
+   left: -100%;
+
+   &--active {
+      left: 0; 
+   }
+
+   &__closeBtn {
+      position: absolute;
+      right: 20px;
+      top: 16px;
+      padding: 0 3px 1px;
+   }
+
+   &__closeIcon {
+      @include svg(30px,$white-clr)
+   }
+
+   &__optionsBlock {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+   }
+
+   &__applyBtn {
+      display: block;
+      padding: 9px 30px;
+   }
 }
