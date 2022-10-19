@@ -406,11 +406,15 @@ body {
 .slider__slide {
   width: 100%;
   height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
 }
 
 .home {
   width: 100%;
-  padding: 20px;
 }
 .home__laptop {
   display: flex;
@@ -418,6 +422,19 @@ body {
   align-items: center;
   flex-direction: column;
   height: 196px;
+}
+@media (max-width: 480px) {
+  .home__laptop {
+    display: none;
+  }
+}
+.home__laptopMobile {
+  display: none;
+}
+@media (max-width: 480px) {
+  .home__laptopMobile {
+    display: block;
+  }
 }
 .home__laptopHeader {
   background: #BDB5B5;
@@ -449,10 +466,18 @@ body {
 }
 .home__laptopLogo {
   width: 100%;
+  max-width: 244px;
   opacity: 0;
   animation: screen-show 0.5s linear 1;
   animation-fill-mode: forwards;
   animation-delay: 4.5s;
+  margin: 0 auto;
+  display: block;
+}
+@media (max-width: 480px) {
+  .home__laptopLogo {
+    animation-delay: 0s;
+  }
 }
 .home__laptopText {
   opacity: 0;
@@ -462,6 +487,14 @@ body {
   animation: screen-show 0.5s linear 1;
   animation-fill-mode: forwards;
   animation-delay: 4.5s;
+}
+@media (max-width: 480px) {
+  .home__laptopText {
+    font-size: 16px;
+    animation: none;
+    opacity: 1;
+    text-align: center;
+  }
 }
 .home__laptopText::after {
   content: "";
@@ -474,6 +507,12 @@ body {
   border-left: 2px solid #50D0EC;
   animation: typing 5s steps(16) infinite, border-blink 0.5s linear infinite;
   animation-delay: 4.8s, 4.8s;
+}
+@media (max-width: 480px) {
+  .home__laptopText::after {
+    display: none;
+    animation: none;
+  }
 }
 .home__laptopFooter {
   margin-top: 3px;
@@ -492,6 +531,11 @@ body {
   max-width: 650px;
   width: 100%;
   text-align: center;
+}
+@media (max-width: 480px) {
+  .home__scrollerBlock {
+    display: none;
+  }
 }
 .home__scroller {
   border: 1px solid #fff;

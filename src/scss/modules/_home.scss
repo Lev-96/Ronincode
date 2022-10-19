@@ -1,11 +1,22 @@
 .home {
    width: 100%;
-   padding: 20px;
 
    &__laptop {
       @include flex-col(flex-end);
       flex-direction: column;
       height: 196px;
+
+      @include for-mobile {
+         display: none
+      }
+   }
+
+   &__laptopMobile {
+      display: none;
+
+      @include for-mobile {
+         display: block
+      }
    }
 
    &__laptopHeader {
@@ -38,10 +49,17 @@
 
    &__laptopLogo {
       width: 100%;
+      max-width: 244px;
       opacity: 0;
       animation: screen-show 0.5s linear 1;
       animation-fill-mode: forwards;
       animation-delay: 4.5s;
+      margin: 0 auto;
+      display: block;
+
+      @include for-mobile {
+         animation-delay: 0s;
+      }
    }
 
    &__laptopText {
@@ -51,6 +69,13 @@
       animation: screen-show 0.5s linear 1;
       animation-fill-mode: forwards;
       animation-delay: 4.5s;
+
+      @include for-mobile {
+         font-size: 16px;
+         animation: none;
+         opacity: 1;
+         text-align: center;
+      }
 
       &::after {
          content: '';
@@ -64,6 +89,10 @@
          animation: typing 5s steps(16) infinite, border-blink 0.5s linear infinite;
          animation-delay: 4.8s, 4.8s;
 
+         @include for-mobile {
+            display: none;
+            animation: none;
+         }
       }
    }
 
@@ -77,13 +106,19 @@
    }
 
    &__content-text {
-      @include set-font(16px,400,$white-clr);
+      @include set-font(16px, 400, $white-clr);
       padding: 8px;
       background: $light-black-clr;
       margin: 20px auto;
       max-width: 650px;
       width: 100%;
       text-align: center;
+   }
+
+   &__scrollerBlock {
+      @include for-mobile {
+         display: none;
+      } 
    }
 
    &__scroller {
@@ -104,10 +139,11 @@
             top: calc(100% - 16px);
             background: $blue-clr;
          }
-         
+
       }
-      
-   } 
+
+   }
+
    &__scrollerInner {
       transition: $transition;
       width: 8px;
@@ -120,7 +156,7 @@
    }
 
    &__scrollerText {
-      @include set-font(14px,400, $white-clr);
+      @include set-font(14px, 400, $white-clr);
       text-align: center;
       margin-top: 15px;
       letter-spacing: 2px;
@@ -181,6 +217,7 @@
    0% {
       display: none;
    }
+
    100% {
       display: block;
 
