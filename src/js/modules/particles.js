@@ -4,14 +4,13 @@ export const particlesFunc = function () {
    let bodyWidth = body.getBoundingClientRect().width
    let bodyHeight = body.getBoundingClientRect().height
 
-
    let canvas = document.createElement('canvas'),
       ctx = canvas.getContext('2d'),
       w = canvas.width = bodyWidth,
       h = canvas.height = bodyHeight,
       particles = [],
       properties = {
-         bgColor: '#1a0046',
+         bgColor: '#071018',
          particleColor: '#726E78',
          particleRadius: 3,
          particleCount: 60,
@@ -19,6 +18,7 @@ export const particlesFunc = function () {
          lineLength: 150,
          particleLife: 20,
       };
+
 
    document.querySelector('.contentBg').appendChild(canvas);
 
