@@ -21,8 +21,3 @@ export const html = () => {
       .pipe(app.plugins.browsersync.stream())
 
 }
-
-
-
-
-// 

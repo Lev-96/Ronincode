@@ -63,7 +63,7 @@ export const particlesFunc = function () {
    }
 
    function reDrawBackground() {
-      let grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      let grd = ctx.createLinearGradient(0, canvas.height, canvas.width, 0);
       grd.addColorStop(0, '#020202');      
       grd.addColorStop(1, '#0040A8');
       

@@ -10,7 +10,6 @@
 
 body {
   min-height: 100vh;
-  height: 800px;
   background-color: #282828;
 }
 
@@ -402,7 +401,6 @@ body {
 .slider {
   border: 1px solid #50D0EC;
   width: 100%;
-  height: 77vh;
 }
 .slider__slide {
   width: 100%;
@@ -623,9 +621,6 @@ body {
 }
 .ourService {
   width: 100%;
-  height: 75vh;
-  border: 1px solid #50D0EC;
-  padding: 20px;
 }
 .ourService__service {
   display: flex;
