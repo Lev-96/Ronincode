@@ -8,10 +8,10 @@ export const particlesFunc = function () {
       ctx = canvas.getContext('2d'),
       w = canvas.width = bodyWidth,
       h = canvas.height = bodyHeight,
+
       particles = [],
       properties = {
-         bgColor: '#071018',
-         particleColor: '#726E78',
+         particleColor: '#50D0EC',
          particleRadius: 3,
          particleCount: 60,
          particleMaxVelocity: 0.5,
@@ -63,8 +63,13 @@ export const particlesFunc = function () {
    }
 
    function reDrawBackground() {
-      ctx.fillStyle = properties.bgColor;
+      let grd = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
+      grd.addColorStop(0, '#020202');      
+      grd.addColorStop(1, '#0040A8');
+      
+      ctx.fillStyle = grd;
       ctx.fillRect(0, 0, w, h);
+
    }
 
    function drawLines() {
