@@ -15,7 +15,7 @@ export const spriteSvg = () => {
          mode: {
             stack: {
                sprite: `../icons/sprite.svg`,
-               example: true
+               example: false
             }
          }
       }))
